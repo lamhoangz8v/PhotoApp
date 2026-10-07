@@ -4,40 +4,51 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:background="@color/black"
-  tools:context=".ViewPhotoActivity">
+  tools:context=".ViewUserActivity">
 
   <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="15px">
+    android:padding="15dp">
 
     <ImageView
       android:id="@+id/iv_detail"
       android:layout_width="match_parent"
-      android:layout_height="500dp"
+      android:layout_height="400dp"
+      android:contentDescription="User Profile Picture"
       tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-      android:id="@+id/tv_detail_title"
+      android:id="@+id/tv_detail_username"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_gravity="center"
       android:fontFamily="cursive"
-      android:padding="15px"
-      android:text="Title"
+      android:padding="10dp"
+      android:text="Username"
       android:textAlignment="center"
       android:textColor="#00E5FF"
-      android:textSize="20sp"
+      android:textSize="24sp"
       android:textStyle="bold" />
 
     <TextView
-      android:id="@+id/tv_detail_description"
+      android:id="@+id/tv_detail_password"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="5dp"
+      android:text="Password"
+      android:textColor="#888888"
+      android:textSize="14sp" />
+
+    <TextView
+      android:id="@+id/tv_detail_bio"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:fontFamily="casual"
-      android:paddingBottom="50px"
-      android:text="Description"
+      android:paddingTop="10dp"
+      android:paddingBottom="50dp"
+      android:text="Short Bio"
       android:textColor="#FF9100"
       android:textSize="16sp" />
   </LinearLayout>
