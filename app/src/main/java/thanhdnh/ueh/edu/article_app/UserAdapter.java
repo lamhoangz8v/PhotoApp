@@ -45,6 +45,7 @@ public class UserAdapter extends BaseAdapter {
       convertView = inflater.inflate(R.layout.user_disp_tpl, null);
       dataitem.iv_photo = convertView.findViewById(R.id.imv_photo);
       dataitem.tv_caption = convertView.findViewById(R.id.tv_title);
+      dataitem.tv_bio = convertView.findViewById(R.id.tv_short_bio);
       convertView.setTag(dataitem);
     } else {
       dataitem = (MyView) convertView.getTag();
@@ -57,11 +58,15 @@ public class UserAdapter extends BaseAdapter {
       dataitem.iv_photo.setImageResource(android.R.drawable.ic_menu_gallery);
     }
     dataitem.tv_caption.setText(user.getUsername());
+    if (dataitem.tv_bio != null) {
+      dataitem.tv_bio.setText(user.getShort_bio());
+    }
     return convertView;
   }
 
   private static class MyView {
     ImageView iv_photo;
     TextView tv_caption;
+    TextView tv_bio;
   }
 }

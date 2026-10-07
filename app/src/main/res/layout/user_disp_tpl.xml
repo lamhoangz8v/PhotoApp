@@ -21,8 +21,21 @@
     android:layout_gravity="center"
     android:fontFamily="cursive"
     android:paddingTop="5sp"
-    android:paddingBottom="10sp"
+    android:paddingBottom="2sp"
     android:text="Username"
     android:textColor="@color/white"
-    android:textSize="18sp" />
+    android:textSize="18sp"
+    android:textStyle="bold" />
+
+  <TextView
+    android:id="@+id/tv_short_bio"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:paddingBottom="10sp"
+    android:text="Short Bio"
+    android:textColor="#CCCCCC"
+    android:textSize="12sp"
+    android:maxLines="2"
+    android:ellipsize="end" />
 </LinearLayout>
