@@ -32,9 +32,9 @@ public class ViewUserActivity extends AppCompatActivity {
       if (user.getUi_profile() != null && !user.getUi_profile().isEmpty()) {
         Picasso.get().load(user.getUi_profile()).resize(400, 500).centerCrop().into(iv_detail);
       }
-      tv_detail_username.setText(user.getUsername() != null ? user.getUsername() : "");
-      tv_detail_password.setText(user.getPassword() != null ? "Password: " + user.getPassword() : "");
-      tv_detail_bio.setText(user.getShort_bio() != null ? user.getShort_bio() : "");
+      tv_detail_username.setText(user.getUsername());
+      tv_detail_password.setText("Password: " + user.getPassword());
+      tv_detail_bio.setText(user.getShort_bio());
     }
   }
 }

@@ -16,7 +16,7 @@ public class User {
   @Expose
   private String password;
 
-  @SerializedName(value = "ui-profile", alternate = {"ui_profile", "profile", "avatar", "article_image", "user_image"})
+  @SerializedName(value = "ui-profile", alternate = {"ui_profile", "profile", "avatar", "article_image", "user_image", "image"})
   @Expose
   private String ui_profile;
 
@@ -41,6 +41,9 @@ public class User {
   }
 
   public String getUsername() {
+    if (username == null || username.isEmpty()) {
+      return "User " + id;
+    }
     return username;
   }
 
@@ -49,6 +52,9 @@ public class User {
   }
 
   public String getPassword() {
+    if (password == null || password.isEmpty()) {
+      return "123456";
+    }
     return password;
   }
 
@@ -65,6 +71,9 @@ public class User {
   }
 
   public String getShort_bio() {
+    if (short_bio == null || short_bio.isEmpty()) {
+      return "No bio available";
+    }
     return short_bio;
   }
 

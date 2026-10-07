@@ -56,7 +56,7 @@ public class UserAdapter extends BaseAdapter {
     } else {
       dataitem.iv_photo.setImageResource(android.R.drawable.ic_menu_gallery);
     }
-    dataitem.tv_caption.setText(user.getUsername() != null ? user.getUsername() : "User " + user.getId());
+    dataitem.tv_caption.setText(user.getUsername());
     return convertView;
   }
 
